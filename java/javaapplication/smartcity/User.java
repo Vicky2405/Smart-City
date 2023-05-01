@@ -208,6 +208,13 @@ public class User extends javax.swing.JFrame {
 
     private void updateDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateDetailsActionPerformed
         // TODO add your handling code here:
+        String user=txt1.getText();
+        String type=userType.getText();
+        UpdateDetails upd=new UpdateDetails();
+        upd.setUser(user);
+        upd.setUserType(type);
+        upd.setVisible(true);
+        dispose();
     }//GEN-LAST:event_updateDetailsActionPerformed
 
     private void resetPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetPasswordActionPerformed
@@ -230,6 +237,47 @@ public class User extends javax.swing.JFrame {
 
     private void ApprovalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ApprovalActionPerformed
         // TODO add your handling code here:
+        String user1=userType.getText();
+        String user=txt1.getText();
+        Approval ap=new Approval();
+        ap.setUser(user);
+            ap.setUserType(user1);
+            ap.setVisible(true);
+            dispose();
+            System.out.print(user1);
+//        if(user1.equalsIgnoreCase("contractor"))
+//        {
+//            System.out.print("2");
+//            Approval ap=new Approval();
+//            ap.setUserType("Contractor");
+//            ap.setVisible(true);
+//            dispose();
+//        }
+//        if(user1.equalsIgnoreCase("mla"))
+//        {
+//            System.out.print("3");
+//            Approval ap=new Approval();
+//            ap.setUserType("MLA");
+//            ap.setVisible(true);
+//            dispose();
+//        }
+//        if(user1.equalsIgnoreCase("cm"))
+//        {
+//            System.out.print("4");
+//            Approval ap=new Approval();
+//            ap.setUserType("CM");
+//            ap.setVisible(true);
+//            dispose();
+//        }
+//        if(user1.equalsIgnoreCase("principal"))
+//        {
+//           System.out.print("1");
+//            Approval ap=new Approval();
+//            ap.setUserType("Principal");
+//            ap.setVisible(true);
+//            dispose();
+//        }
+        
     }//GEN-LAST:event_ApprovalActionPerformed
 
     private void logOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logOutActionPerformed

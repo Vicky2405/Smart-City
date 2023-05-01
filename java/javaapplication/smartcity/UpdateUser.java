@@ -310,6 +310,10 @@ public class UpdateUser extends javax.swing.JFrame {
                             pst1.setString(3,utext);
                             pst1.setString(4,sname);
                             pst1.executeUpdate();
+                            JOptionPane.showMessageDialog(null, "Updated Successfully!");
+                            AdminPage adminpage= new AdminPage();
+                            adminpage.setVisible(true);
+                            dispose();
                         }
                         if(strusertype.equalsIgnoreCase("contractor"))
                         {
@@ -320,6 +324,10 @@ public class UpdateUser extends javax.swing.JFrame {
                             pst1.setString(3,utext);
                             pst1.setString(4,sname);
                             pst1.executeUpdate();
+                            JOptionPane.showMessageDialog(null, "Updated Successfully!");
+                            AdminPage adminpage= new AdminPage();
+                            adminpage.setVisible(true);
+                            dispose();
                         }
                         if(strusertype.equalsIgnoreCase("mla"))
                         {
@@ -330,6 +338,10 @@ public class UpdateUser extends javax.swing.JFrame {
                             pst1.setString(3,utext);
                             pst1.setString(4,sname);
                             pst1.executeUpdate();
+                            JOptionPane.showMessageDialog(null, "Updated Successfully!");
+                            AdminPage adminpage= new AdminPage();
+                            adminpage.setVisible(true);
+                            dispose();
                         }
                         if(strusertype.equalsIgnoreCase("cm"))
                         {
@@ -339,6 +351,10 @@ public class UpdateUser extends javax.swing.JFrame {
                             pst1.setString(2,udistrict);
                             pst1.setString(4,sname);
                             pst1.executeUpdate();
+                            JOptionPane.showMessageDialog(null, "Updated Successfully!");
+                            AdminPage adminpage= new AdminPage();
+                            adminpage.setVisible(true);
+                            dispose();
                         }
                     }
                 }

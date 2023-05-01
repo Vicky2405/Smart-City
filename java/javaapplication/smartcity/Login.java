@@ -17,7 +17,7 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
-        setTitle("Delete User");
+        setTitle("Login");
         setSize(1000,600);
         
         setResizable(false);
@@ -90,24 +90,25 @@ public class Login extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(340, 340, 340)
-                .addComponent(loginSubmit)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(335, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(loginSubmit)
+                        .addGap(156, 156, 156))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(inputPassword)
+                            .addComponent(inputUser, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1))))
+                .addGap(192, 192, 192)
                 .addComponent(jButton2)
                 .addGap(48, 48, 48))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(inputPassword)
-                    .addComponent(inputUser, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addGap(264, 264, 264))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -211,44 +212,49 @@ public class Login extends javax.swing.JFrame {
                 if(rs.next())
                 {
                     String strusertype=rs.getString("usertype");
-                    if(strusertype.equals("Principal"))
-                    {
-                        User usr=new User();
+                    User usr=new User();
                         usr.setUser(user);
-                        usr.setUserType("Pricipal");
+                        usr.setUserType(strusertype);
                         usr.setVisible(true);
                         dispose();
-                    }
-                    else if(strusertype.equals("Contractor"))
-                    {
-                        User usr=new User();
-                        usr.setUser(user);
-                        usr.setUserType("Contractor");
-                        usr.setVisible(true);
-                        dispose();
-                    }
-                    else if(strusertype.equals("MLA"))
-                    {
-                        User usr=new User();
-                        usr.setUser(user);
-                        usr.setUserType("MLA");
-                        usr.setVisible(true);
-                        dispose();
-                    }
-                    else if(strusertype.equals("CM"))
-                    {
-                        User usr=new User();
-                        usr.setUser(user);
-                        usr.setUserType("CM");
-                        usr.setVisible(true);
-                        dispose();
-                    }
-                    else
-                    {
-                        JOptionPane.showMessageDialog(null, "Invalid Credentials!");
-                        inputUser.setText("");
-                        inputPassword.setText("");
-                    }
+//                    if(strusertype.equals("Principal"))
+//                    {
+//                        User usr=new User();
+//                        usr.setUser(user);
+//                        usr.setUserType("Pricipal");
+//                        usr.setVisible(true);
+//                        dispose();
+//                    }
+//                    else if(strusertype.equals("Contractor"))
+//                    {
+//                        User usr=new User();
+//                        usr.setUser(user);
+//                        usr.setUserType("Contractor");
+//                        usr.setVisible(true);
+//                        dispose();
+//                    }
+//                    else if(strusertype.equals("MLA"))
+//                    {
+//                        User usr=new User();
+//                        usr.setUser(user);
+//                        usr.setUserType("MLA");
+//                        usr.setVisible(true);
+//                        dispose();
+//                    }
+//                    else if(strusertype.equals("CM"))
+//                    {
+//                        User usr=new User();
+//                        usr.setUser(user);
+//                        usr.setUserType("CM");
+//                        usr.setVisible(true);
+//                        dispose();
+//                    }
+//                    else
+//                    {
+//                        JOptionPane.showMessageDialog(null, "Invalid Credentials!");
+//                        inputUser.setText("");
+//                        inputPassword.setText("");
+//                    }
                     
                 }
             }

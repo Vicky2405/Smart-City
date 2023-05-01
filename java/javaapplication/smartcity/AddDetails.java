@@ -284,6 +284,11 @@ public class AddDetails extends javax.swing.JFrame {
                 pst.setString(5,district);
                 pst.setString(6,state);
                 pst.executeUpdate();
+                String query1="insert into details(name,infra_type) values(?,?)";
+                pst=con.prepareStatement(query1);
+                pst.setString(1,sname);
+                pst.setString(2, "School");
+                pst.executeUpdate();
             }
         }
         catch(Exception ex)

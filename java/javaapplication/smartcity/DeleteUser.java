@@ -7,7 +7,6 @@ package javaapplication.smartcity;
 import javax.swing.JFrame;
 import java.sql.*;
 import javax.swing.JOptionPane;
-//import javax.swing.JOptionPane;
 
 /**
  *
